@@ -1,0 +1,76 @@
+
+.header{
+    height: 10vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    .container{
+        .container-fluid{
+            .navbar-brand{
+                margin-right: 2rem;
+                .navbar-brand__text{
+                    font-weight: bold;
+                    font-size: 25px;
+                    letter-spacing: 0.1rem;
+                    .u{
+                        color: white;
+                        font-weight: 900;
+                        font-size: 36px;
+                    }
+                    .r{
+                        color: white;
+                    }
+                    .dot{
+                        font-weight: 900;
+                        font-size: 32px;
+                        color: aqua;
+                    }
+                    .g{
+                        color: whitesmoke;
+                    }
+                }
+            }
+            .navbar__collapse{
+                // font-weight:;
+                font-size: 16px;
+                letter-spacing: 0.1rem;
+                color: white !important;
+                .home__link{
+                    color: rgb(254,112,51);
+                }
+                .navbar__right{
+                    .loginbtn{
+                        border-radius: 0px;
+                        border: 1px solid white;
+                        padding: 0.5rem 3rem;
+                        color:white;
+                        transition: all 0.3s;
+                        
+                        &:hover{
+                            background-color:rgb(254,112,51);
+                            color: white;
+                            border: none;
+                             border-radius: 2px;
+                        }
+                    }
+                    .registerBtn{
+                        color: white;
+                        padding: 0.5rem 3rem;
+                        background-color: rgb(254,112,51);
+                        border-radius: 0px !important;
+                        transition: all 0.5s;
+                        &:hover{
+                            background-color: transparent;
+                            border: 1px solid white !important;
+                            color :rgb(254,112,51) !important;
+                        }
+                }
+            }
+          
+        }
+    }
+    
+}
+}
