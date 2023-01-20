@@ -6,6 +6,8 @@ import { HeaderComponent } from './Components/Header/Header.component';
 
 import { HeroSection } from './Components/HeroSection/Hero.Component';
 import { LoginComponent } from './Components/Login/login/login.component';
+import {RouterModule} from '@angular/router';
+import { appRoutes } from './Routes/routes';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { LoginComponent } from './Components/Login/login/login.component';
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
