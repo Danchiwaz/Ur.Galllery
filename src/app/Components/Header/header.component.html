@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header fixed-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -30,10 +30,32 @@
                     <a class="nav-link active  home__link" aria-current="page" href="#">Home</a>
                   </li> -->
           </ul>
+
+          <!-- showed if user is logged in  -->
           <form
+            *ngIf="user"
             class="d-flex align-items-center justify-content-center gap-3 navbar__right"
           >
-            <a [routerLink]="['/login']" class="nav-link btn loginbtn">Sign in</a>
+          <div class="profile__total_info">
+            <div class="profile__img">
+              <img src="../../../assets/images/africanMan.png" alt="">
+            </div>
+            <div class="profile__info">
+              <p>Daniel Maina <br><small>mainadanielwachira@gmail.com</small></p>
+              
+            </div>
+          </div>
+            
+          </form>
+          <!-- showed if user is not logged in  -->
+          <form
+            *ngIf="!user"
+            class="d-flex align-items-center justify-content-center gap-3 navbar__right"
+          >
+          
+            <a [routerLink]="['/login']" class="nav-link btn loginbtn"
+              >Sign in</a
+            >
             <button class="btn btn-outline-success registerBtn" type="submit">
               Register Today
             </button>

@@ -1,10 +1,9 @@
 
 .header{
     height: 10vh;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  background-color: #0A0726;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 
     .container{
         .container-fluid{
@@ -41,6 +40,40 @@
                     color: rgb(254,112,51);
                 }
                 .navbar__right{
+                    .profile__total_info{
+                        display: flex;
+                        gap: 0.5rem;
+                        align-items: center;
+                        justify-content: center;
+                       
+                        .profile__img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: white;
+                            img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            border:1.5px solid rgb(254,112,51)
+                            }
+                            
+                        }
+                        .profile__info{
+                            padding-top: 1.2rem;
+                            p{
+                                color: white;
+                                font-size: 11px;
+    
+                                small{
+                                    color: gray;
+                                    
+                                }
+                            }
+                        }
+                    }
+                   
                     .loginbtn{
                         border-radius: 0px;
                         border: 1px solid white;

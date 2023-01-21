@@ -8,13 +8,21 @@ import { HeroSection } from './Components/HeroSection/Hero.Component';
 import { LoginComponent } from './Components/Login/login/login.component';
 import {RouterModule} from '@angular/router';
 import { appRoutes } from './Routes/routes';
+import { ProfileComponent } from './Components/Profile/profile.component';
+import { UsersComponent } from './Components/Profile/Users/users.component';
+import { AlbumComponent } from './Components/Profile/albums/album.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HeroSection,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    UsersComponent,
+    AlbumComponent,
+ 
   ],
   imports: [
     BrowserModule,
