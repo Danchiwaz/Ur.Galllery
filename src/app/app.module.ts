@@ -11,6 +11,9 @@ import { appRoutes } from './Routes/routes';
 import { ProfileComponent } from './Components/Profile/profile.component';
 import { UsersComponent } from './Components/Profile/Users/users.component';
 import { AlbumComponent } from './Components/Profile/albums/album.component';
+import { SingleUserComponent } from './Components/Profile/single-user/single-user.component';
+import { SingleAlbumComponent } from './Components/Profile/single-album/single-album.component';
+import { PicComponent } from './Components/Profile/pic/pic.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { AlbumComponent } from './Components/Profile/albums/album.component';
     ProfileComponent,
     UsersComponent,
     AlbumComponent,
+    SingleUserComponent,
+    SingleAlbumComponent,
+    PicComponent,
  
   ],
   imports: [
