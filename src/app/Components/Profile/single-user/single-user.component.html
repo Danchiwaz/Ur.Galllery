@@ -1,0 +1,60 @@
+<div class="container single_user">
+  <div class="row">
+    <h4 class="text-light">Profile</h4>
+  </div>
+  <!-- spinner Logic  -->
+  <div class="text-center spinner">
+    <img *ngIf="spinner" src="../../../../assets/images/spinner2.svg" alt="" />
+  </div>
+  <!-- end of the spinner logic  -->
+
+  <!-- user profile information  -->
+  <ng-container *ngIf="show">
+    <div class="col-sm-12 single_user-personalInfo">
+      <div class="single_user-details">
+        <img
+          src="https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556785.jpg?w=900&t=st=1674638679~exp=1674639279~hmac=9b0c5af0e741ef8a44ef5ad76916865f66a448a174fd896c43c8e2e2b64a8b6f"
+          alt=""
+        />
+        <div class="div single_user-identity">
+          <h4>{{ singleUser.name }}</h4>
+          <p>{{ singleUser.email }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of user information  -->
+
+    <!-- users album information  -->
+    <div class="row" style="margin-top: 2rem; margin-bottom: 2rem">
+      <h4 class="text-light">Albums</h4>
+    </div>
+    <div class="row user-album">
+      <!-- albums table   -->
+      <table class="table table-resposive">
+        <thead>
+          <tr>
+            <th class="text-muted">Title</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- album loop begin here  -->
+          <ng-container *ngFor="let single of userAlbums">
+            <tr>
+              <td class="text-light">{{ single.title }}</td>
+              <td>
+                <button class="btn" [routerLink]="['/profile/singlealbum', single.id]">   
+                  Open
+                </button>
+              </td>
+            </tr>
+          </ng-container>
+
+          <!-- end of the albums loop -->
+        </tbody>
+      </table>
+      <!-- end of albums table -->
+    </div>
+    <!-- end of the album infomation  -->
+  </ng-container>
+</div>

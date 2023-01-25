@@ -1,0 +1,122 @@
+.profile__right {
+  margin-top: 3rem;
+
+  // albums styles here
+  .albums {
+    margin-bottom: 3rem;
+    .albums__first-row {
+      h4 {
+        font-weight: 400;
+      }
+
+      button {
+        padding: 0.5rem 2rem;
+        border: 1px solid #fb7f4a;
+        background-color: transparent !important;
+        color: white !important;
+
+        &:hover {
+          border: 1px dotted #fb7f4a;
+          color: #fb7f4a !important;
+        }
+      }
+    }
+  }
+  // end of albums styles here
+
+  .search__bar {
+    display: flex !important;
+    flex-direction: row;
+    .profile__right-title {
+      color: rgb(143, 136, 136);
+      font-size: 14px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  table {
+    margin-left: 1rem;
+    width: 95%;
+    border: none !important;
+    thead {
+      color: white;
+      margin-bottom: 1rem !important;
+    }
+   
+    tbody {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(17, 25, 40, 0.75);
+      border-radius: 12px;
+      padding-top: 4rem;
+      // background-color: red;
+
+      .row__info {
+        // border: 1px solid lightgray !important;
+        margin-bottom: 0.5rem !important;
+        .first__td {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 1rem;
+
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #fb7f4a;
+            // media query
+            @media only screen and (max-width: 600px) {
+              width: 40px;
+              height: 40px;
+            }
+            // end of media query
+          }
+          .user__info {
+            p {
+              color: white;
+              small {
+                color: #425466;
+              }
+            }
+            // media query
+            @media only screen and (max-width: 600px) {
+              p {
+                font-size: 14px;
+              }
+            }
+            // end of media query
+          }
+        }
+        a {
+          text-decoration: none;
+          border: none;
+          background-color: #0A0726;
+          border-radius: 4px;
+          padding: 0.5rem 1rem;
+          color: white;
+          width: 40px;
+          margin-top: 0.2rem !important;
+          transition: all 0.5s;
+
+          &:hover {
+            color: #fb7f4a !important;;
+            background-color: #0a0635;
+          }
+        }
+      }
+    }
+    // media query
+    @media only screen and (max-width: 600px) {
+      font-size: 14px;
+      width: 92.7% !important;
+      thead {
+        font-size: 11px;
+      }
+    }
+    // end of media query
+  }
+}

@@ -1,0 +1,99 @@
+.single_user {
+  margin-top: 3rem;
+  .single_user-personalInfo {
+    margin-top: 2rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+
+    .single_user-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      background-color: transparent;
+
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #fb7f4a;
+        background-color: transparent;
+        @media only screen and (max-width: 600px) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .single_user-identity {
+        background-color: transparent;
+        h4 {
+          background-color: transparent;
+          color: whitesmoke;
+        }
+        p {
+          color: gray;
+          background-color: transparent;
+          font-style: italic;
+          font-size: 15px;
+        }
+        @media only screen and (max-width: 600px) {
+          h4 {
+            font-size: 11px;
+          }
+          p {
+            font-size: 10.3px;
+          }
+        }
+      }
+    }
+  }
+
+  //   user album styles
+  .user-album {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    margin-left: 0.4rem;
+
+    .table {
+      button {
+        color: #fff;
+        border: 1px solid #fb7f4a;
+        border-radius: 0 !important;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: all 0.5s;
+        &:hover {
+          color: #fb7f4a;
+          border: 1px dotted #fb7f4a;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        button {
+          font-size: 11px;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .text-light {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  // end of the user album styles
+  @media only screen and (max-width: 600px) {
+    .text-light {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+  @media only screen and (max-width: 820px) {
+    margin-top: 6rem;
+  }
+}

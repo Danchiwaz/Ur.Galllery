@@ -1,35 +1,67 @@
-
-<div class="header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <h2 class="navbar-brand__text">
-                    <span class="u">U</span>
-                    <span class="r">r</span>
-                    <span class="dot">.</span>
-                    <span class="g">Gallery</span> 
-                </h2>
-               
-              </a>
-              <button class="navbar-toggler navbar-toggler__customized" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "></span>
-              </button>
-              <div class="collapse navbar-collapse navbar__collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <!-- <li class="nav-item">
+<div class="header fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']">
+          <h2 class="navbar-brand__text">
+            <span class="u">U</span>
+            <span class="r">r</span>
+            <span class="dot">.</span>
+            <span class="g">Gallery</span>
+          </h2>
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler__customized"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navbar__collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
                     <a class="nav-link active  home__link" aria-current="page" href="#">Home</a>
                   </li> -->
-                 
-                </ul>
-                <form class="d-flex align-items-center justify-content-center gap-3 navbar__right">
-                  <a href="#" class="nav-link btn loginbtn">Sign in</a>
-                  <button class="btn btn-outline-success registerBtn" type="submit">Register Today</button>
-                </form>
+          </ul>
+
+          <!-- showed if user is logged in  -->
+          <form
+            *ngIf="user"
+            class="d-flex align-items-center justify-content-center gap-3 navbar__right"
+          >
+            <div class="profile__total_info">
+              <div class="profile__img">
+                <img [src]="userInfo.photoUrl" alt="" />
+              </div>
+              <div class="profile__info">
+                <p>
+                  {{ userInfo.name }} <br /><small>{{ userInfo.email }}</small>
+                </p>
               </div>
             </div>
-          </nav>
-    </div>
-   
-    
+          </form>
+          <!-- showed if user is not logged in  -->
+          <form
+            *ngIf="!user"
+            class="d-flex align-items-center justify-content-center gap-3 navbar__right"
+          >
+            <a [routerLink]="['/login']" class="nav-link btn loginbtn"
+              >Sign in</a
+            >
+            <button class="btn btn-outline-success registerBtn" type="submit">
+              Register Today
+            </button>
+          </form>
+          <!-- end of if user is not logged in  -->
+        </div>
+      </div>
+    </nav>
+  </div>
 </div>
