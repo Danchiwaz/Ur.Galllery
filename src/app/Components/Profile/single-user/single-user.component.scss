@@ -63,14 +63,18 @@
     .table {
       button {
         color: #fff;
-        border: 1px solid #fb7f4a;
-        border-radius: 0 !important;
+        border: none;
+          background-color: #0A0726;
+          border-radius: 4px;
+          padding: 0.5rem 1rem;
+          color: white;
+          
         padding-left: 2rem;
         padding-right: 2rem;
         transition: all 0.5s;
         &:hover {
           color: #fb7f4a;
-          border: 1px dotted #fb7f4a;
+          
         }
       }
       @media only screen and (max-width: 600px) {

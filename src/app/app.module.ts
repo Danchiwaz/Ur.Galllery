@@ -19,6 +19,7 @@ import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-s
 import {
   GoogleLoginProvider,
 } from '@abacritt/angularx-social-login';
+import { PagenotfoundComponent } from './Components/pagenotFound/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {
     SingleUserComponent,
     SingleAlbumComponent,
     PicComponent,
+    PagenotfoundComponent,
  
   ],
   imports: [
