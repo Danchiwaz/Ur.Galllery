@@ -1,180 +1,38 @@
 <div class="container single-album">
-    <div class="row">
+       <!-- spinner Logic  -->
+       <div class="text-center spinner">
+        <img *ngIf="spinner" src="../../../../assets/images/spinner2.svg" alt="" />
+      </div>
+      <!-- end of the spinner logic  -->
+  
+
+    <ng-container *ngIf="show">
+      <div class="row">
         <div class="col-md-2">
             <button class="btn" routerLink="/profile/user">Go back</button>
         </div>
         
     </div>
-  <div class="row">
-    <h4 class="text-light">Serengeti Album</h4>
-  </div>
-  <div class="row">
-    <!-- the loop begins here  -->
-    <div class="col-md-2" routerLink="/profile/pic">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
+      <div class="row">
+        <h4 class="text-light">{{ albumTitle }}</h4>
       </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
+      <div class="row">
+        <!-- the loop begins here  -->
+        <ng-container *ngFor="let collection of AlbumCollection">
+          <div class="col-md-2" [routerLink]="['/profile/pic', collection.id]">
+            <div class="card">
+              <div class="card-head">
+                <img
+                  class="img-fluid"
+                  [src]="collection.url"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <!-- the end of the loop  -->
       </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card">
-        <div class="card-head">
-          <img
-            class="img-fluid"
-            src="../../../../assets/images/africanMan1.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <!-- the end of the loop  -->
-  </div>
+    </ng-container>
+  
 </div>

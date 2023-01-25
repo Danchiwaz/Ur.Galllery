@@ -24,3 +24,11 @@ export interface PhotoModel{
 
 }
 // end of the photo model structure 
+
+
+export interface userI{
+    name:string;
+    password:string;
+    photoUrl:string;
+    lastname:string;
+}

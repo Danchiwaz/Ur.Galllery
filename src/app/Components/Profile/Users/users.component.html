@@ -1,24 +1,20 @@
 <!-- right menu  -->
 
 <div class="col-md-10 profile__right">
-  <!-- albums loop starts here  -->
 
-  <div class="row albums">
-  
-
-    <div class="row album__second-row"><</div>
-  </div>
-
-  <!-- end of the album section  -->
-
-  <div class="row search__bar">
-    <div>
-      <!-- <h4 class="profile__right-title">Users and albums</h4> -->
-    </div>
-  </div>
   <div class="div row">
+    <div class="text-center spinner">
+      <img
+        *ngIf="spinner"
+        src="../../../../assets/images/spinner2.svg"
+        alt=""
+      />
+    </div>
     <!-- table start  -->
-    <table class="table table-responsive table-borderless">
+    <table
+      *ngIf="show"
+      class="table table-responsive table-borderless"
+    >
       <thead>
         <tr>
           <th>Posts From</th>
@@ -26,85 +22,39 @@
           <th></th>
         </tr>
       </thead>
-      <tbody>
-        <!-- loop will start here  -->
-        <tr class="row__info">
-          <td class="first__td">
-            <img src="../../../../assets/images/africanMan.png" alt="" />
-            <div class="user__info">
-              <p>
-                Daniel Maina <br />
-                <small>@mainadanielwachira</small>
-              </p>
-            </div>
-          </td>
-          <td class="text-light">12</td>
-          <td>
-            <a [routerLink]="['/profile/user']">View</a>
-          </td>
-        </tr>
 
-        <!-- loop will end here  -->
-        <tr class="row__info">
-          <td class="first__td">
-            <img src="../../../../assets/images/africanMan.png" alt="" />
-            <div class="user__info">
-              <p>
-                Daniel Maina <br />
-                <small>@mainadanielwachira</small>
-              </p>
-            </div>
-          </td>
-          <td class="text-light">23</td>
-          <td>
-            <a href="#">View</a>
-          </td>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
-        <tr class="row__info">
-          <td class="first__td">
-            <img src="../../../../assets/images/africanMan1.png" alt="" />
-            <div class="user__info">
-              <p>
-                Daniel Maina <br />
-                <small>@mainadanielwachira</small>
-              </p>
-            </div>
-          </td>
-          <td class="text-light">1</td>
-          <td>
-            <a href="#">View</a>
-          </td>
-        </tr>
-        <tr class="row__info">
-          <td class="first__td">
-            <img src="../../../../assets/images/africanMan1.png" alt="" />
-            <div class="user__info">
-              <p>
-                Daniel Maina <br />
-                <small>@mainadanielwachira</small>
-              </p>
-            </div>
-          </td>
-          <td class="text-light">1</td>
-          <td>
-            <a href="#">View</a>
-          </td>
-        </tr>
-        <tr class="row__info">
-          <td class="first__td">
-            <img src="../../../../assets/images/africanMan1.png" alt="" />
-            <div class="user__info">
-              <p>
-                Daniel Maina <br />
-                <small>@mainadanielwachira</small>
-              </p>
-            </div>
-          </td>
-          <td class="text-light">1</td>
-          <td>
-            <a href="#">View</a>
-          </td>
-        </tr>
+        <!-- loop will start here  -->
+
+        <ng-container *ngFor="let user of userInfo">
+          <tr class="row__info">
+            <td class="first__td">
+              <img
+                src="https://img.freepik.com/free-photo/3d-rendering-zoom-call-avatar_23-2149556785.jpg?w=900&t=st=1674638679~exp=1674639279~hmac=9b0c5af0e741ef8a44ef5ad76916865f66a448a174fd896c43c8e2e2b64a8b6f"
+                alt=""
+              />
+              <div class="user__info">
+                <p>
+                  {{ user.name }} <br />
+                  <small>{{ user.email }}</small>
+                </p>
+              </div>
+            </td>
+            <td class="text-light">12</td>
+            <td>
+              <a [routerLink]="['/profile/user', user.id]">View</a>
+            </td>
+          </tr>
+
+          <!-- loop will end here  -->
+        </ng-container>
+
+    
       </tbody>
     </table>
     <!-- end of the table  -->

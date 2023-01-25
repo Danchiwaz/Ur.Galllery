@@ -1,8 +1,9 @@
 .profile {
   margin-top: 3rem;
   .profile__left {
-    height: 90vh;
-    margin-top: 2rem;
+    height: 85vh;
+    margin-top: 5.4rem;
+    // position: fixed;
     
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -24,6 +25,10 @@
         border: 1px solid #fb7f4a;
         color: #fb7f4a !important;
         cursor: pointer;
+      }
+      img{
+        width: 20px;
+        height: 20px;
       }
       a {
         text-decoration: none;
@@ -91,4 +96,7 @@
      }
      // end of media query 
   }
+  // .profile_right{
+  //   margin-left: 20rem;
+  // }
 }

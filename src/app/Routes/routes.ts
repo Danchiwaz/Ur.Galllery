@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router"
+import { LoginComponent } from "../Components/authentication/login/login.component"
 import { HeroSection } from "../Components/HeroSection/Hero.Component"
-import { LoginComponent } from "../Components/Login/login/login.component"
 import { AlbumComponent } from "../Components/Profile/albums/album.component"
 import { PicComponent } from "../Components/Profile/pic/pic.component"
 import { ProfileComponent } from "../Components/Profile/profile.component"
@@ -30,11 +30,11 @@ export const appRoutes:Routes =[
                 component: AlbumComponent
             },
             {
-                path:'user',
+                path:'user/:userId',
                 component: SingleUserComponent
             },
             {
-                path:'singlealbum',
+                path:'singlealbum/:albumId',
                 component:SingleAlbumComponent
             },
             {

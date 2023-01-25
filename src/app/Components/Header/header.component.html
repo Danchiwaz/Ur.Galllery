@@ -36,23 +36,22 @@
             *ngIf="user"
             class="d-flex align-items-center justify-content-center gap-3 navbar__right"
           >
-          <div class="profile__total_info">
-            <div class="profile__img">
-              <img src="../../../assets/images/africanMan.png" alt="">
+            <div class="profile__total_info">
+              <div class="profile__img">
+                <img [src]="userInfo.photoUrl" alt="" />
+              </div>
+              <div class="profile__info">
+                <p>
+                  {{ userInfo.name }} <br /><small>{{ userInfo.email }}</small>
+                </p>
+              </div>
             </div>
-            <div class="profile__info">
-              <p>Daniel Maina <br><small>mainadanielwachira@gmail.com</small></p>
-              
-            </div>
-          </div>
-            
           </form>
           <!-- showed if user is not logged in  -->
           <form
             *ngIf="!user"
             class="d-flex align-items-center justify-content-center gap-3 navbar__right"
           >
-          
             <a [routerLink]="['/login']" class="nav-link btn loginbtn"
               >Sign in</a
             >
@@ -60,6 +59,7 @@
               Register Today
             </button>
           </form>
+          <!-- end of if user is not logged in  -->
         </div>
       </div>
     </nav>
