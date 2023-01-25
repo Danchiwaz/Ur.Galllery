@@ -38,7 +38,7 @@ export const appRoutes:Routes =[
                 component:SingleAlbumComponent
             },
             {
-                path:'pic',
+                path:'pic/:photoId',
                 component:PicComponent
             }
         

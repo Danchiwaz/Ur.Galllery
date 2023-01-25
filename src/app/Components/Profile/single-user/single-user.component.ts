@@ -14,8 +14,7 @@ export class SingleUserComponent implements OnInit {
   spinner: boolean = false;
   show: boolean = false;
   userId: number;
-  userAlbums: AlbumInterface[] = []
-  ;
+  userAlbums: AlbumInterface[] = [];
 
   constructor(
     private profService: ProfileService,
@@ -40,12 +39,9 @@ export class SingleUserComponent implements OnInit {
         this.getAllUserAlbums(this.userId);
       }
     });
-
-   
-    
   }
 
-  // function to get all user albums 
+  // function to get all user albums
   getAllUserAlbums(id: number) {
     this.profService
       .getUserAlbums()
@@ -57,5 +53,5 @@ export class SingleUserComponent implements OnInit {
         }
       });
   }
-  // end of the function to get all the users albums 
+  // end of the function to get all the users albums
 }
