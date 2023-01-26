@@ -63,8 +63,13 @@ export class PicComponent implements OnInit {
       title: this.phototitle,
     };
 
-    this.profService.UpdateThePhotTitle(payload, photoId).subscribe((data) => {
-      console.log('Title updated successfully');
+    this.profService.UpdateThePhotTitle(payload, photoId).subscribe({
+      next:(data) =>{
+        console.log("The title has been updated successfully");
+        
+      },
+      error:(err) => console.log(err)
+      
     });
   }
 }

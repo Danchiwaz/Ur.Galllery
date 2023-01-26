@@ -72,6 +72,16 @@
                                 }
                             }
                         }
+                       
+                    }
+                    .logout__btn{
+                       color: whitesmoke;
+                       background-color:#10142D ;
+                       padding: 0.5rem 2rem;
+                       border: none;
+                       &:hover{
+                        color: #FB7F4A;
+                       }
                     }
                    
                     .loginbtn{
