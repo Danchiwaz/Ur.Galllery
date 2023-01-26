@@ -55,3 +55,5 @@ export class SingleUserComponent implements OnInit {
   }
   // end of the function to get all the users albums
 }
+
+
