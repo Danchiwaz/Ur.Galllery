@@ -18,6 +18,7 @@ export class UsersComponent implements OnInit {
   constructor(private profService: ProfileService) {}
 
   ngOnInit() {
+    // subscribing to service getting all users 
     this.profService.getUsers().subscribe((users) => {
       this.spinner = true;
       setTimeout(() => {
