@@ -53,7 +53,7 @@ import { PagenotfoundComponent } from './Components/pagenotFound/pagenotfound/pa
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '197095498280-md4hv99gegm4rorncgnu1n82et1vj08k.apps.googleusercontent.com'
+              '476622984798-dq1e00kesnv5h4quaaqugeufn9sgkpca.apps.googleusercontent.com'
             )
           },
         ],
