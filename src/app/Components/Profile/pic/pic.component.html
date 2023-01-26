@@ -1,36 +1,49 @@
 <div class="container pic">
-  <div class="row">
-    <div class="col-md-2">
-      <button class="btn" routerLink="/profile/singlealbum">Back</button>
-    </div>
+  <!-- spinner Logic  -->
+  <div class="text-center spinner">
+    <img *ngIf="spinner" src="../../../../assets/images/spinner2.svg" alt="" />
   </div>
-  <div class="row">
-    <!-- display the pic here  -->
-    <div class="col-md-8 pic__left">
-      <img src="../../../../assets/images/dan.png" class="img-fluid" alt="" />
-      <div class="row">
-        <h5>
-          Title: <small>Riding Horses and also driving racing cars</small>
-        </h5>
+  <!-- end of the spinner logic  -->
+  <ng-container *ngIf="show">
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn" routerLink="/profile/users">Back</button>
       </div>
     </div>
-    <!-- end of the displaying thte pic  -->
-
-    <!-- editting the functionalities  -->
-    <div class="col-md-4 pic__right">
-      <button *ngIf="!edit" class="btn" (click)="changeEditState()">
-        Edit
-      </button>
-      <button class="btn pic-btn__delete">Delete</button>
-
-      <div class="row" *ngIf="edit">
-        <form action="">
-          <label for="pic_title">Title:</label>
-          <input type="text" id="pic_title" class="form-control" />
-          <button class="btn" (click)="editTitle()">Update</button>
-        </form>
+    <div class="row">
+      <!-- display the pic here  -->
+      <div class="col-md-8 pic__left">
+        <img [src]="photo.url" class="img-fluid" alt="" />
+        <div class="row">
+          <h5>
+            Title: <small>{{ photo.title }}</small>
+          </h5>
+        </div>
       </div>
+      <!-- end of the displaying thte pic  -->
+
+      <!-- editting the functionalities  -->
+      <div class="col-md-4 pic__right">
+        <button *ngIf="!edit" class="btn" (click)="changeEditState()">
+          Edit
+        </button>
+
+        <div class="row" *ngIf="edit">
+          <form action="">
+            <label for="pic_title">Title:</label>
+            <input
+              type="text"
+              id="pic_title"
+              class="form-control"
+              [value]="phototitle"
+            />
+            <button class="btn" (click)="updateThePhotoTitle(photo.id)">
+              Update
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- end of the editting of the functionalities  -->
     </div>
-    <!-- end of the editting of the functionalities  -->
-  </div>
+  </ng-container>
 </div>

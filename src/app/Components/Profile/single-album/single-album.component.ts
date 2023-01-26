@@ -12,7 +12,7 @@ export class SingleAlbumComponent implements OnInit {
   // variable declarations
   albumId: number;
   AlbumCollection: PhotoInterface[] = [];
-  albumTitle:string;
+  albumTitle: string;
   spinner: boolean = false;
   show: boolean = false;
   // end of the variables declarations
@@ -21,15 +21,15 @@ export class SingleAlbumComponent implements OnInit {
     private activatedRouter: ActivatedRoute
   ) {}
   ngOnInit() {
-    // getting the params from the activated Route 
+    // getting the params from the activated Route
     this.activatedRouter.params.subscribe((params) => {
       if (params) {
         this.albumId = params['albumId'];
         this.spinner = true;
-        setTimeout(()=>{
+        setTimeout(() => {
           this.spinner = false;
           this.show = true;
-        },2000)
+        }, 2000);
 
         this.getAlbumPhotos(this.albumId);
         this.getTheTitleOfTheSelectedAlbum(this.albumId);
@@ -37,13 +37,13 @@ export class SingleAlbumComponent implements OnInit {
     });
   }
 
-  // function to get the title of the selected album 
-  getTheTitleOfTheSelectedAlbum(albumId:number){
-        this.profService.getAlbumTitle(albumId).subscribe(data =>{
-            this.albumTitle = data.title;
-        })
+  // function to get the title of the selected album
+  getTheTitleOfTheSelectedAlbum(albumId: number) {
+    this.profService.getAlbumTitle(albumId).subscribe((data) => {
+      this.albumTitle = data.title;
+    });
   }
-  // end of the function to get the title of the selected album 
+  // end of the function to get the title of the selected album
 
   //  function to get photos for a specific album
   getAlbumPhotos(albumId: number) {
