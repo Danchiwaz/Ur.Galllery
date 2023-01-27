@@ -3,7 +3,7 @@
 
 [Live site in production](https://client-eight-ashen.vercel.app/)
 
-### Implemented CI/CD using Github actions and vercel for deployment.
+###### Implemented CI/CD using Github actions and vercel for deployment.
 
 ### How Run this project in you local machine.
 ###### clone the Project 
