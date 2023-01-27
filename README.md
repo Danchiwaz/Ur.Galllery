@@ -1,5 +1,5 @@
 # Ur.Gallery 
-##### In this application , a user can login using google authentication, see all the users registered, users albums and photos.
+##### In this application , a user can login using google authentication, see all the users registered, see users albums and photos.
 
 [Live site in production](https://client-eight-ashen.vercel.app/)
 
@@ -7,7 +7,7 @@
 ###### clone the Project 
 ###### Navigate to the project folder
 ###### Run `npm install`
-###### Run 'ng serve'
+###### Run `ng serve`
 
 
 
