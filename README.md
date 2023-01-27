@@ -3,11 +3,11 @@
 
 [Live site in production](https://client-eight-ashen.vercel.app/)
 
-# How this project in you local machine.
-clone the Project 
-Navigate to the project folder
-Run `npm install`
-Run 'ng serve'
+### How Run this project in you local machine.
+###### clone the Project 
+###### Navigate to the project folder
+###### Run `npm install`
+###### Run 'ng serve'
 
 
 
