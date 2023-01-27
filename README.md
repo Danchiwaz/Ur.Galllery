@@ -5,7 +5,7 @@
 
 ###### Implemented CI/CD using Github actions and vercel for deployment.
 
-### How Run this project in you local machine.
+### How to Run this project in you local machine.
 ###### clone the Project 
 ###### Navigate to the project folder
 ###### Run `npm install`
