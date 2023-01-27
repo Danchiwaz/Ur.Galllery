@@ -10,6 +10,7 @@ import { ProfileService } from '../profService/Profile.service';
 export class UsersComponent implements OnInit {
   // variable declarations
   userInfo: UserInterface[];
+  Noalbums:number=10;
   singleUser: UserInterface;
   spinner: boolean = false;
   show: boolean = false;
@@ -18,7 +19,7 @@ export class UsersComponent implements OnInit {
   constructor(private profService: ProfileService) {}
 
   ngOnInit() {
-    // subscribing to service getting all users 
+    // subscribing to the service getting all users 
     this.profService.getUsers().subscribe((users) => {
       this.spinner = true;
       setTimeout(() => {

@@ -9,9 +9,11 @@ import { ProfileService } from './profService/Profile.service';
 })
 export class ProfileComponent implements OnInit {
    user:UserInterface[];
+   
   constructor(private profService: ProfileService){}
  
   ngOnInit(){
+    // executing  the service to consume all users 
      this.profService.getUsers().subscribe({
       next:(user) =>{this.user = user;},
       error:(err) => console.log(err)
